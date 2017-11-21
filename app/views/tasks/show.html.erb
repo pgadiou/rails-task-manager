@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" id="head">
+      <h3><%= @task.title %></h3>
+    </div>
+    <div class="col-md-3">
+      <div class="card" ">
+        <p><%= link_to "Edit task", task_edit_path(@task) %></p>
+        <p><%= link_to "Back to tasks", tasks_path %></p>
+        <p><%= link_to "Delete", task_path(@task), method: :delete %></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span-6">
+      <div class="card" id="details">
+        <p><%= @task.details %></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span-6">
+      <div class="card" id="details">
+      <p>Task completed?<%= check_box_tag "Done?", "#", @task.completed %></p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.container {
+  margin: 30px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.row p {
+  vertical-align: middle;
+}
+
+#details {
+  background-color: #A8F9FF;
+}
+
+#head {
+  background-color: #F0F2EF;
+}

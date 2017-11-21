@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-2">
+      <h2 class="text-center">Your list of tasks</h2>
+    </div>
+  </div>
+
+  <% @tasks.each do |task| %>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-1">
+        <p><%= link_to task.title, task_path(task) %></p>
+      </div>
+      <div class="col-md-4 col-md-offset-1">
+        <%= check_box_tag "Done?", "#", task.completed %>
+      </div>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-1">
+      <div class="card" id='head'>
+        <p><%= link_to "New task", "tasks/new" %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
